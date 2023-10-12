@@ -4,20 +4,39 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página</title>
+    <title>Mi Página</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
+<html style="scroll-behavior: smooth;"></html>
 <body>
     <header>
         <img src="img/icono.png" alt="Foto de perfil" style="float: left;"
         height="100" width="100">
-        <h1>Página de Daniel</h1>
     </header>
-    <nav>
-        <a href="#PERFIL">Perfil</a>
-        <a href="#ACTIVIDADES">Actividades</a>
-        <a href="#VINCULOS">Vinculos</a>
-        <a href="#CONTACTOS">Contactos</a>
-    </nav>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand">Mi Página Web</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#PERFIL">Perfil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#ACTIVIDADES">Actividades</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#VINCULOS">Vinculos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#CONTACTOS">Contactos</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     <section>
         <a name="PERFIL"><h2>Perfil</h2></a>
         <article>
@@ -32,32 +51,48 @@
             <p>Estos son los videojuegos<br>
                Que más me gustan
             </p>
-            <table border="2" align="center">
+            <table class="table table-dark">
                 <caption>Lista de juegos</caption>
-                <tr>
-                    <th>Puesto</th>
-                    <th>Nombre</th>
-                    <th>Imagen</th>
-                </tr>
+                <thead>
+                    <tr>
+                      <th scope="col">Puesto</th>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Imagen</th>
+                    </tr>
+                </thead>
+                <tbody>
                 <tr>
                     <td>1</td>
                     <td>League of legends</td>
                     <td><img src="https://www.mundodeportivo.com/alfabeta/hero/2020/11/Guia-completa-de-League-of-Legends-trucos-y-secretos.jpg?width=768&aspect_ratio=16:9&format=nowebp"
-                        alt="Portada juego 1" height="350" width="400"></td>
+                        alt="Portada juego 1" height="300" width="350"></td>
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td>Mortal kombat</td>
+                    <td>Mortal kombat 11</td>
                     <td><img src="https://store-images.s-microsoft.com/image/apps.9688.70804610839547354.8da93c46-fd13-4b16-8ebe-e8e02c53d93e.09c2e91e-28bd-4f6f-bfd6-79d6b241667a"
-                        alt="Portada juego 2" height="400" width="400"></td>
+                        alt="Portada juego 2" height="350" width="350"></td>
                 </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Mafia II</td>
+                    <td><img src="https://plusgami.com/wp-content/uploads/2020/12/Mafia-2-Definitive-Edition.jpg"
+                        alt="Portada juego 3" height="350" width="350"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>GTA San Andreas</td>
+                    <td><img src="https://static.wikia.nocookie.net/esgta/images/c/c2/Grand_Theft_Auto_San_Andreas.JPG/revision/latest?cb=20161127211015"
+                        alt="Portada juego 4" height="350" width="350"></td>
+                </tr>
+            </tbody>
             </table>
         </article>
     </section>
     <section>
         <a name="VINCULOS"><h2>Vinculos</h2></a>
         <article>
-            <p>Estas son las que frecuento:
+            <p>Estas son las redes sociales que frecuento:
                 <p>
                 <br>
                 <a href="http://www.youtube.com" target="_blank">Youtube</a>
@@ -67,10 +102,22 @@
     </section>
     <footer>
         <a name="CONTACTOS"><h2>Contactos</h2></a>
-        <address>
-            Autor: Daniel C.<br>
-            correo: jdcallejasc@udistrital.edu.co
-        </address>
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Información de contacto</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <address>
+                    Autor: Daniel C.<br>
+                    correo: jdcallejasc@udistrital.edu.co<br>
+                    Copyright 2023
+                </address>
+            </div>
+        </div>
+        <button class="btn btn-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Más sobre mí</button>
+        
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
